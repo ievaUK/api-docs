@@ -25,7 +25,7 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30006
+      nodePort: 30007
   selector:
     app: api-docs
   type: NodePort

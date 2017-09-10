@@ -40,7 +40,7 @@ Retry-After: 10
 ...
 ```
 
-In order to ensure high availability and quality service for all of our users, Parakeet enforces a limit of 120 requests every 60 seconds over the API. If you need this limit to be raised, please contact us with your use case and we can increase your limit.
+In order to ensure high availability and quality service for all of our users, Parakeet enforces a limit of 120 requests every 60 seconds over the API. The limit is enforced independently per account.
 
 Each request will include the following headers
 
@@ -56,7 +56,11 @@ If you exceed the rate limit, you will receive a `429 Too Many Requests` respons
 
 ### Other Rate Limits
 
-Other endpoints in the Parakeet API may have specific rate limits that are more strict than the global rate limiter. For example, you may be rate limited when using the API to send text messages or provision phone numbers. If you have a specific need to work around these limits, please contact us and let us know your use case. We may be able to increase your limit.
+Other endpoints in the Parakeet API may have specific rate limits that are more strict than the global rate limiter. For example, you may be rate limited when using the API to send text messages or provision phone numbers.
+
+### Request Increased Limit
+
+If you have specific needs that require a higher limit, please contact us. We'd be happy to better understand your use case and increase your rate limit if it's appropriate.
 
 ## Pagination
 

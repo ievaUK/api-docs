@@ -83,6 +83,12 @@ Links to next and previous pages of results are contained in the `Link` header o
 Cursors are short-lived and tied to the request parameters used when originally loading results. Please do not store cursors, or attempt to use them on different requests.
 </aside>
 
+## Change Policy
+
+The Parakeet API Platform is always under active development. Documentation on this page is subject to change. We will always do our best to retain backwards compatibility for all changes, and notify our customers in the event a backwards incompatible change is made.
+
+Backwards compatible changes, however, may be made to the API with no advance notice. Your code should be able to handle these changes without issue. Specifically, we may add new fields to existing objects, new endpoints, and new webhook events without an announcement. By default, most languages and libraries will handle this without issue.
+
 ## Errors
 
 The Parakeet API follows HTTP conventions for indicating errors. Successful requests will yield a response code in the 200 range. Failed requests will generate a non-200 response code.

@@ -42,7 +42,9 @@ Event | Description
 `call.archived` | Call has been archived
 `call.unarchived` | Call has been unarchived
 `call.comment` | Call has been commented on
-`message.sent` | Text message was sent
-`message.delivered` | Text message was delivered
-`message.failed` | Text message failed to send
-`message.received` | Text message was received
+`number.created` | Number has been provisioned and added
+`number.updated` | Number has been updated to a new destination
+`number.deleted` | Number has been deleted and is no longer callable
+`user.created` | User has been added to the account
+`user.updated` | User has been updated
+`user.deleted` | User has been deleted from the account 

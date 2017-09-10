@@ -33,6 +33,7 @@ Parameter | Type | Description
 id | string | Parakeet Number ID
 country_code | string | ISO-2 country code for the phone number
 number | string | E.164 formatted phone number
+formatted_number | string | Phone number formatted to the country's national format
 status | string | Current status of the number, either `porting` or `confirmed`
 name | string | Name of the phone number for display, taken from the target
 target_type | string | Type of the target that this number points to

@@ -67,6 +67,9 @@ nickname | string | Special nickname for the contact
 company_name | string | Name of the company that the contact belongs to
 default_image | boolean | `true` if the image object is a Parakeet generated default
 time_zone | string | Time zone that the contact is located in
+phone_numbers | array | Array of phone numbers attached to the contact
+emails | array | Array of email addresses attached to the contact
+addresses | array | Array of physical addresses attached to the contact
 birth_date | string | Birth date for the contact
 created_at | date | Timestamp when the contact was created
 updated_at | date | Timestamp when the contact was last updated

@@ -54,6 +54,10 @@ Header | Description
 
 If you exceed the rate limit, you will receive a `429 Too Many Requests` response from the API. Additionally, a `Retry-After` header will be added indicating the number of seconds you must wait before you will be able to make another API call.
 
+### Other Rate Limits
+
+Other endpoints in the Parakeet API may have specific rate limits that are more strict than the global rate limiter. For example, you may be rate limited when using the API to send text messages or provision phone numbers. If you have a specific need to work around these limits, please contact us and let us know your use case. We may be able to increase your limit.
+
 ## Pagination
 
 > Example Paginated Response

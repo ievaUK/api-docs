@@ -9,11 +9,11 @@ Users are individual people that are able to make and receive calls under your P
   "href": "/api/v1/users/US5ad75c3b670511e78b0727a6bbabf621",
   "id": "US5ad75c3b670511e78b0727a6bbabf621",
   "role": "owner",
-  "email": "colin@parakeet.is",
+  "email": "john@parakeet.is",
   "profile": {
-    "first_name": "Colin",
-    "last_name": "Morelli",
-    "role": "Founder",
+    "first_name": "John",
+    "last_name": "Smith",
+    "role": "Owner",
     "time_zone": "America/New_York",
     "image": {
       "48": "https://static.parakeet.is/images/48.png",
@@ -34,7 +34,7 @@ Users are individual people that are able to make and receive calls under your P
 
 Parameter | Type | Description
 --------- | ------- | -----------
-id | string | Parakeet Account ID
+id | string | Parakeet User ID
 role | string | Set of permissions the user has `user`, `admin` or `owner`
 email | string | Email address associated with the user
 profile.first_name | string | First name for the user
@@ -61,11 +61,11 @@ Link: <https://api.parakeet.is/api/v1/users?cursor=abcdefg>; rel="next"; cursor=
     "href": "/api/v1/users/US5ad75c3b670511e78b0727a6bbabf621",
     "id": "US5ad75c3b670511e78b0727a6bbabf621",
     "role": "owner",
-    "email": "colin@parakeet.is",
+    "email": "john@parakeet.is",
     "profile": {
-      "first_name": "Colin",
-      "last_name": "Morelli",
-      "role": "Founder",
+      "first_name": "John",
+      "last_name": "Smith",
+      "role": "Owner",
       "time_zone": "America/New_York",
       "image": {
         "48": "https://static.parakeet.is/images/48.png",
@@ -115,11 +115,11 @@ Content-Type: application/json
   "href": "/api/v1/users/US5ad75c3b670511e78b0727a6bbabf621",
   "id": "US5ad75c3b670511e78b0727a6bbabf621",
   "role": "owner",
-  "email": "colin@parakeet.is",
+  "email": "john@parakeet.is",
   "profile": {
-    "first_name": "Colin",
-    "last_name": "Morelli",
-    "role": "Founder",
+    "first_name": "John",
+    "last_name": "Smith",
+    "role": "Owner",
     "time_zone": "America/New_York",
     "image": {
       "48": "https://static.parakeet.is/images/48.png",
@@ -170,11 +170,11 @@ Location: https://api.parakeet.is/api/v1/users/US5ad75c3b670511e78b0727a6bbabf62
   "href": "/api/v1/users/US5ad75c3b670511e78b0727a6bbabf621",
   "id": "US5ad75c3b670511e78b0727a6bbabf621",
   "role": "owner",
-  "email": "colin@parakeet.is",
+  "email": "john@parakeet.is",
   "profile": {
-    "first_name": "Colin",
-    "last_name": "Morelli",
-    "role": "Founder",
+    "first_name": "John",
+    "last_name": "Smith",
+    "role": "Owner",
     "time_zone": "America/New_York",
     "image": {
       "48": "https://static.parakeet.is/images/48.png",

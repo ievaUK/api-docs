@@ -14,7 +14,7 @@ This understanding is critical to the way calls function in Parakeet.
   "status": "completed",
   "disposition": "connected",
   "duration": 5,
-  "remote": "+19167642508",
+  "remote": "+12125551234",
   "contact": { ... },
   "user": { ... },
   "assignee": { ... },
@@ -35,7 +35,7 @@ This understanding is critical to the way calls function in Parakeet.
 
 Parameter | Type | Description
 --------- | ------- | -----------
-id | string | Parakeet Account ID
+id | string | Parakeet Call ID
 direction | string | `inbound` if the call was received, `outbound` if it was placed
 status | string | Current status of the call
 disposition | string | Disposition of the call (`null` until status is `completed`)
@@ -70,7 +70,7 @@ Link: <https://api.parakeet.is/api/v1/calls?cursor=abcdefg>; rel="next"; cursor=
     "status": "completed",
     "disposition": "connected",
     "duration": 5,
-    "remote": "+19167642508",
+    "remote": "+12125551234",
     "contact": { ... },
     "user": { ... },
     "assignee": { ... },
@@ -127,7 +127,7 @@ Content-Type: application/json
   "status": "completed",
   "disposition": "connected",
   "duration": 5,
-  "remote": "+19167642508",
+  "remote": "+12125551234",
   "contact": { ... },
   "user": { ... },
   "assignee": { ... },
@@ -171,7 +171,7 @@ curl https://api.parakeet.is/api/v1/calls/CA663b709f951611e787aae7b5749363bb
   "status": "completed",
   "disposition": "connected",
   "duration": 5,
-  "remote": "+19167642508",
+  "remote": "+12125551234",
   "contact": { ... },
   "user": { ... },
   "assignee": null,
@@ -263,11 +263,11 @@ Content-Type: application/json
     "href": "/api/v1/users/US5ad75c3b670511e78b0727a6bbabf621",
     "id": "US5ad75c3b670511e78b0727a6bbabf621",
     "role": "owner",
-    "email": "colin@parakeet.is",
+    "email": "john@parakeet.is",
     "profile": {
-      "first_name": "Colin",
-      "last_name": "Morelli",
-      "role": "Founder",
+      "first_name": "John",
+      "last_name": "Smith",
+      "role": "Owner",
       "time_zone": "America/New_York",
       "image": {
         "48": "https://static.parakeet.is/images/48.png",

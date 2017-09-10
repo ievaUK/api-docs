@@ -18,14 +18,14 @@ While all contacts can be searched using the Parakeet API, only contacts created
   "id": "CNa402c39f726411e7a2d617b4f2b45fec",
   "title": null,
   "color": "862D0C",
-  "display_name": "Mollie Nolan",
-  "first_name": "Mollie",
+  "display_name": "Jane Doe",
+  "first_name": "Jane",
   "middle_name": null,
-  "last_name": "Nolan",
+  "last_name": "Doe",
   "suffix": null,
   "nickname": null,
-  "role": "Denials Analyst",
-  "company_name": "HSS",
+  "role": "Customer Service Manager",
+  "company_name": "Parakeet",
   "default_image": true,
   "image": {
     "48": "https://static.parakeet.is/images/48.png",
@@ -40,7 +40,7 @@ While all contacts can be searched using the Parakeet API, only contacts created
     {
       "label": "Home",
       "country_code": "US",
-      "number": "+19167642508",
+      "number": "+12125551234",
       "primary": false
     }
   ],
@@ -55,7 +55,7 @@ While all contacts can be searched using the Parakeet API, only contacts created
 
 Parameter | Type | Description
 --------- | ------- | -----------
-id | string | Parakeet Account ID
+id | string | Parakeet Contact ID
 title | string | Personal or professional title for the contact (Dr, Mr, Mrs, etc)
 color | string | Randomly generated color that can be used to create a default image
 display_name | string | Formatted name that should be displayed to the user
@@ -84,14 +84,14 @@ Link: <https://api.parakeet.is/api/v1/contacts?cursor=abcdefg>; rel="next"; curs
     "id": "CNa402c39f726411e7a2d617b4f2b45fec",
     "title": null,
     "color": "862D0C",
-    "display_name": "Mollie Nolan",
-    "first_name": "Mollie",
+    "display_name": "Jane Doe",
+    "first_name": "Jane",
     "middle_name": null,
-    "last_name": "Nolan",
+    "last_name": "Doe",
     "suffix": null,
     "nickname": null,
-    "role": "Denials Analyst",
-    "company_name": "HSS",
+    "role": "Customer Service Manager",
+    "company_name": "Parakeet",
     "default_image": true,
     "image": {
       "48": "https://static.parakeet.is/images/48.png",
@@ -106,7 +106,7 @@ Link: <https://api.parakeet.is/api/v1/contacts?cursor=abcdefg>; rel="next"; curs
       {
         "label": "Home",
         "country_code": "US",
-        "number": "+19167642508",
+        "number": "+12125551234",
         "primary": false
       }
     ],
@@ -146,14 +146,14 @@ Content-Type: application/json
   "id": "CNa402c39f726411e7a2d617b4f2b45fec",
   "title": null,
   "color": "862D0C",
-  "display_name": "Mollie Nolan",
-  "first_name": "Mollie",
+  "display_name": "Jane Doe",
+  "first_name": "Jane",
   "middle_name": null,
-  "last_name": "Nolan",
+  "last_name": "Doe",
   "suffix": null,
   "nickname": null,
-  "role": "Denials Analyst",
-  "company_name": "HSS",
+  "role": "Customer Service Manager",
+  "company_name": "Parakeet",
   "default_image": true,
   "image": {
     "48": "https://static.parakeet.is/images/48.png",
@@ -168,7 +168,7 @@ Content-Type: application/json
     {
       "label": "Home",
       "country_code": "US",
-      "number": "+19167642508",
+      "number": "+12125551234",
       "primary": false
     }
   ],

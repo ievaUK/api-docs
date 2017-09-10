@@ -1,0 +1,31 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: api-docs
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: api-docs
+    spec:
+      containers:
+        - name: api-docs
+          image: IMAGE_TAG
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: api-docs
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30006
+  selector:
+    app: api-docs
+  type: NodePort

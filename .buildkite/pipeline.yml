@@ -1,0 +1,32 @@
+steps:
+  - label: 'Build Documentation'
+    command: |-
+      IMAGE_ID=$(docker build -q .)
+      docker run -w /usr/src/app/source -v $(pwd):/usr/src/app/source -v $(pwd)/build:/usr/src/app/build -it $IMAGE_ID
+      docker build -t quay.io/parakeet/api-docs:$BUILDKITE_COMMIT -f Dockerfile.nginx .
+    agents:
+      platform: 'linux'
+  - wait: 'Wait for Build'
+    branches: 'master'
+  - label: 'Push Documentation'
+    branches: 'master'
+    command: |-
+      docker push quay.io/parakeet/marketing:$BUILDKITE_COMMIT
+    agents:
+      platform: 'linux'
+  - wait: 'Wait for Push'
+    branches: 'master'
+  - label: 'Deploy to Development'
+    branches: 'master'
+    command: |-
+      cat deployment/deployment.yaml | sed "s/IMAGE_TAG/quay.io\/parakeet\/api-docs:$BUILDKITE_COMMIT/" | kubectl apply --context development -f -
+    agents:
+      platform: 'linux'
+  - block: 'Request Release'
+    branches: 'master'
+  - label: 'Deploy to Production'
+    branches: 'master'
+    command: |-
+      cat deployment/deployment.yaml | sed "s/IMAGE_TAG/quay.io\/parakeet\/api-docs:$BUILDKITE_COMMIT/" | kubectl apply --context production -f -
+    agents:
+      platform: 'linux'

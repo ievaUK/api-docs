@@ -17,6 +17,29 @@ To authenticate, use HTTP basic authentication with the **username** set to your
 
 ## Rate Limiting
 
+> Standard Rate Limit Headers
+
+```http
+HTTP/1.1 200 OK
+X-RateLimit-Remaining: 10
+X-RateLimit-Limit: 120
+X-RateLimit-Reset: 1505057280
+
+...
+```
+
+> Exhausted Rate Limit Response
+
+```http
+HTTP/1.1 429 Too Many Requests
+X-RateLimit-Remaining: 0
+X-RateLimit-Limit: 120
+X-RateLimit-Reset: 1505057280
+Retry-After: 10
+
+...
+```
+
 In order to ensure high availability and quality service for all of our users, Parakeet enforces a limit of 120 requests every 60 seconds over the API. If you need this limit to be raised, please contact us with your use case and we can increase your limit.
 
 Each request will include the following headers
@@ -26,6 +49,10 @@ Header | Description
 `X-RateLimit-Limit` | Maximum number of requests allowed per sampling window
 `X-RateLimit-Remaining` | Remaining number of requests for the current time window
 `X-RateLimit-Reset` | Timestamp when the current window rolls over 
+
+### Detecting Rate Limit
+
+If you exceed the rate limit, you will receive a `429 Too Many Requests` response from the API. Additionally, a `Retry-After` header will be added indicating the number of seconds you must wait before you will be able to make another API call.
 
 ## Pagination
 

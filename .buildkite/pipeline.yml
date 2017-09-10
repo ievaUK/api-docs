@@ -11,7 +11,7 @@ steps:
   - label: 'Push Documentation'
     branches: 'master'
     command: |-
-      docker push quay.io/parakeet/marketing:$BUILDKITE_COMMIT
+      docker push quay.io/parakeet/api-docs:$BUILDKITE_COMMIT
     agents:
       platform: 'linux'
   - wait: 'Wait for Push'

@@ -107,7 +107,7 @@ Code | Meaning
 401 | **Unauthorized**: Your API key is invalid or was not included
 403 | **Forbidden**: Your request was authenticated, but you do not have access to the requested resource
 404 | **Not Found**: The requested resource could not be found
-405 | **Method Not Allowed**: The endpoint your requested does not support your request method
+405 | **Method Not Allowed**: The endpoint you requested does not support your request method
 406 | **Not Acceptable**: You requested a non-JSON response format
 422 | **Unprocessable Entity**: Your request was syntactically valid, but logically invalid
 429 | **Too Many Requests**: You have exceeded the rate limit for the API

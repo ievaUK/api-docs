@@ -34,7 +34,6 @@ Event | Description
 `contact.created` | Contact has been created
 `contact.updated` | Contact has been updated
 `contact.deleted` | Contact has been deleted
-`call.started` | Call has started ringing
 `call.connected` | Call has been answered
 `call.ended` | Call has terminated
 `call.tagged` | Call has been tagged

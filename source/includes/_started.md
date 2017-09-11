@@ -62,6 +62,12 @@ Other endpoints in the Parakeet API may have specific rate limits that are more 
 
 If you have specific needs that require a higher limit, please contact us. We'd be happy to better understand your use case and increase your rate limit if it's appropriate.
 
+## Date Formats
+
+The Parakeet API Platform _always_ expresses all dates as ISO-8601 date strings (with milliseconds), and they are always provided in UTC. An example of a timestamp in the API is `2017-07-12T13:23:55.372Z`. 
+
+The only exception to this rule is the `X-RateLimit-Reset` header which, by convention, uses a Unix timestamp to indicate when rate limits are reset.
+
 ## Pagination
 
 > Example Paginated Response

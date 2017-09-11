@@ -14,6 +14,7 @@ includes:
   - account
   - calls
   - contacts
+  - media
   - numbers
   - tags
   - users

@@ -81,7 +81,7 @@ Link: <https://api.parakeet.is/api/v1/numbers?cursor=abcdefg>; rel="next"; curso
 ]
 ```
 
-Page through the Parakeet users in the account
+Page through the Parakeet numbers in the account
 
 ### HTTP Request
 
@@ -91,7 +91,6 @@ Page through the Parakeet users in the account
 
 Parameter | Type | Values
 --------- | ------- | -----------
-name | string | Search the users by name
 limit | number | Number of results to return, max 100.
 
 ## Get Number

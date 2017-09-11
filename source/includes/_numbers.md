@@ -206,6 +206,10 @@ Parameter | Type | Values
 number | number | Phone number returned from the Available Numbers API
 target | string or object | Pointer to a user or team that this number should route to
 
+<aside class="warning">
+Provisioning a number may incur an additional charge to your account. Please see your billing page to determine your per-number cost.
+</aside>
+
 ## Update Number
 
 ```shell

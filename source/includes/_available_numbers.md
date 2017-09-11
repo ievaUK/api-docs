@@ -1,6 +1,6 @@
 # Available Numbers
 
-Available numbers are phone numbers that you can provision for your account. You can use the Parakeet API platform to filter through available numbers and provision one for your account.
+Available numbers are phone numbers that are ready for use in Parakeet. You can use the Parakeet API platform to search through available numbers and provision one for your account.
 
 ## Available Number Object
 

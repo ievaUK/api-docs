@@ -12,6 +12,8 @@ toc_footers:
 includes:
   - started
   - account
+  - addresses
+  - available_numbers
   - calls
   - contacts
   - media

@@ -86,7 +86,7 @@ curl https://api.parakeet.is/api/v1/addresses
     "city": "New York", \
     "region": "NY", \
     "postal_code": "10010", \
-    "country_code": "US"
+    "country_code": "US" \
   }'
 ```
 

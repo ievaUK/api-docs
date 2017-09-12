@@ -52,9 +52,9 @@ Searches available phone numbers.
 
 Parameter | Type | Description
 --------- | ------- | -----------
-*country* | string | ISO-2 country code to search for numbers
-*type* | string | Phone number type, one of `local`, `mobile`, or `toll_free`
-query | string | Fitler for phone numbers containing an alphanumeric string
+**country** | string | ISO-2 country code to search for numbers
+**type** | string | Phone number type, one of `local`, `mobile`, or `toll_free`
+query | string | Filter for phone numbers containing an alphanumeric string
 
 ### HTTP Request
 

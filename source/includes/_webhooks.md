@@ -31,9 +31,6 @@ Below is a complete list of events that are available via Parakeet webhooks. Par
 
 Event | Description
 --------- | ------- | -----------
-`contact.created` | Contact has been created
-`contact.updated` | Contact has been updated
-`contact.deleted` | Contact has been deleted
 `call.connected` | Call has been answered
 `call.ended` | Call has terminated
 `call.tagged` | Call has been tagged
@@ -41,6 +38,10 @@ Event | Description
 `call.archived` | Call has been archived
 `call.unarchived` | Call has been unarchived
 `call.comment` | Call has been commented on
+`call.voicemail` | Voicemail has been left for a call
+`contact.created` | Contact has been created
+`contact.updated` | Contact has been updated
+`contact.deleted` | Contact has been deleted
 `number.created` | Number has been provisioned and added
 `number.updated` | Number has been updated to a new destination
 `number.deleted` | Number has been deleted and is no longer callable

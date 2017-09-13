@@ -140,6 +140,13 @@ limit | number | Number of results to return, max 100.
 
 ## Get Contact
 
+```shell
+curl https://api.parakeet.is/api/v1/contacts/{id}
+  -u '{accountId}:{apiKey}'
+```
+
+> Example Response
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -189,3 +196,207 @@ Fetches a specific contact by its identifier.
 ### HTTP Request
 
 `GET https://api.parakeet.is/api/v1/contacts/{id}`
+
+## Create Contact
+
+```shell
+curl https://api.parakeet.is/api/v1/contacts
+  -X POST
+  -u '{accountId}:{apiKey}'
+  -H 'Content-Type: application/json'
+  -d '{ \
+    "first_name": "Jane", \
+    "last_name": "Doe", \
+    "phone_numbers": [{ \
+      "number": "+12125551234"
+    }] \
+  }'
+```
+
+> Example Response
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: https://api.parakeet.is/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec
+
+{
+  "href": "/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec",
+  "id": "CNa402c39f726411e7a2d617b4f2b45fec",
+  "title": null,
+  "color": "862D0C",
+  "display_name": "Jane Doe",
+  "first_name": "Jane",
+  "middle_name": null,
+  "last_name": "Doe",
+  "suffix": null,
+  "nickname": null,
+  "role": "Customer Service Manager",
+  "company_name": "Parakeet",
+  "default_image": true,
+  "image": {
+    "48": "https://static.parakeet.is/images/48.png",
+    "64": "https://static.parakeet.is/images/64.png",
+    "256": "https://static.parakeet.is/images/256.png",
+    "512": "https://static.parakeet.is/images/512.png",
+    "original": "https://static.parakeet.is/images/original.png"
+  },
+  "birth_date": null,
+  "time_zone": null,
+  "phone_numbers": [
+    {
+      "label": "Home",
+      "country_code": "US",
+      "number": "+12125551234",
+      "primary": false
+    }
+  ],
+  "emails": [],
+  "addresses": [],
+  "notes": null,
+  "reference": null,
+  "created_at": "2017-07-27T00:43:43.203Z",
+  "updated_at": "2017-09-08T23:13:35.791Z"
+}
+```
+
+Fetches a specific contact by its identifier.
+
+### HTTP Request
+
+`POST https://api.parakeet.is/api/v1/contacts`
+
+## Create Contact
+
+```shell
+curl https://api.parakeet.is/api/v1/contacts
+  -X POST
+  -u '{accountId}:{apiKey}'
+  -H 'Content-Type: application/json'
+  -d '{ \
+    "first_name": "Jane", \
+    "last_name": "Doe", \
+    "phone_numbers": [{ \
+      "number": "+12125551234"
+    }] \
+  }'
+```
+
+> Example Response
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: https://api.parakeet.is/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec
+
+{
+  "href": "/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec",
+  "id": "CNa402c39f726411e7a2d617b4f2b45fec",
+  "title": null,
+  "color": "862D0C",
+  "display_name": "Jane Doe",
+  "first_name": "Jane",
+  "middle_name": null,
+  "last_name": "Doe",
+  "suffix": null,
+  "nickname": null,
+  "role": "Customer Service Manager",
+  "company_name": "Parakeet",
+  "default_image": true,
+  "image": {
+    "48": "https://static.parakeet.is/images/48.png",
+    "64": "https://static.parakeet.is/images/64.png",
+    "256": "https://static.parakeet.is/images/256.png",
+    "512": "https://static.parakeet.is/images/512.png",
+    "original": "https://static.parakeet.is/images/original.png"
+  },
+  "birth_date": null,
+  "time_zone": null,
+  "phone_numbers": [
+    {
+      "label": "Home",
+      "country_code": "US",
+      "number": "+12125551234",
+      "primary": false
+    }
+  ],
+  "emails": [],
+  "addresses": [],
+  "notes": null,
+  "reference": null,
+  "created_at": "2017-07-27T00:43:43.203Z",
+  "updated_at": "2017-09-08T23:13:35.791Z"
+}
+```
+
+Creates a new contact.
+
+### HTTP Request
+
+`POST https://api.parakeet.is/api/v1/contacts`
+
+## Update Contact
+
+```shell
+curl https://api.parakeet.is/api/v1/contacts/{id}
+  -X POST
+  -u '{accountId}:{apiKey}'
+  -H 'Content-Type: application/json'
+  -d '{ \
+    "first_name": "Jim", \
+    "last_name": "Doe", \
+  }'
+```
+
+> Example Response
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: https://api.parakeet.is/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec
+
+{
+  "href": "/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec",
+  "id": "CNa402c39f726411e7a2d617b4f2b45fec",
+  "title": null,
+  "color": "862D0C",
+  "display_name": "Jim Doe",
+  "first_name": "Jim",
+  "middle_name": null,
+  "last_name": "Doe",
+  "suffix": null,
+  "nickname": null,
+  "role": "Customer Service Manager",
+  "company_name": "Parakeet",
+  "default_image": true,
+  "image": {
+    "48": "https://static.parakeet.is/images/48.png",
+    "64": "https://static.parakeet.is/images/64.png",
+    "256": "https://static.parakeet.is/images/256.png",
+    "512": "https://static.parakeet.is/images/512.png",
+    "original": "https://static.parakeet.is/images/original.png"
+  },
+  "birth_date": null,
+  "time_zone": null,
+  "phone_numbers": [
+    {
+      "label": "Home",
+      "country_code": "US",
+      "number": "+12125551234",
+      "primary": false
+    }
+  ],
+  "emails": [],
+  "addresses": [],
+  "notes": null,
+  "reference": null,
+  "created_at": "2017-07-27T00:43:43.203Z",
+  "updated_at": "2017-09-08T23:13:35.791Z"
+}
+```
+
+Updates a specific contact by its identifier.
+
+### HTTP Request
+
+`POST https://api.parakeet.is/api/v1/contacts/{id}`

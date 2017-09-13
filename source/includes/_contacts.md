@@ -208,7 +208,8 @@ curl https://api.parakeet.is/api/v1/contacts
     "first_name": "Jane", \
     "last_name": "Doe", \
     "phone_numbers": [{ \
-      "number": "+12125551234"
+      "label": "Mobile", \
+      "number": "+12125551234" \
     }] \
   }'
 ```

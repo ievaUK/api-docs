@@ -283,9 +283,8 @@ curl https://api.parakeet.is/api/v1/contacts/{id}
 > Example Response
 
 ```http
-HTTP/1.1 201 Created
+HTTP/1.1 200 OK
 Content-Type: application/json
-Location: https://api.parakeet.is/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec
 
 {
   "href": "/api/v1/contacts/CNa402c39f726411e7a2d617b4f2b45fec",

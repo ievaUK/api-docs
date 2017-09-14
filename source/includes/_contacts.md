@@ -204,13 +204,13 @@ curl https://api.parakeet.is/api/v1/contacts
   -X POST
   -u '{accountId}:{apiKey}'
   -H 'Content-Type: application/json'
-  -d '{ \
-    "first_name": "Jane", \
-    "last_name": "Doe", \
-    "phone_numbers": [{ \
-      "label": "Mobile", \
-      "number": "+12125551234" \
-    }] \
+  -d '{
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "phone_numbers": [{
+      "label": "Mobile",
+      "number": "+12125551234"
+    }]
   }'
 ```
 
@@ -274,9 +274,9 @@ curl https://api.parakeet.is/api/v1/contacts/{id}
   -X POST
   -u '{accountId}:{apiKey}'
   -H 'Content-Type: application/json'
-  -d '{ \
-    "first_name": "Jim", \
-    "last_name": "Doe", \
+  -d '{
+    "first_name": "Jim",
+    "last_name": "Doe",
   }'
 ```
 

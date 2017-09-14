@@ -79,14 +79,14 @@ Searches all registered addresses
 curl https://api.parakeet.is/api/v1/addresses
   -H 'Content-Type: application/json'
   -u '{accountId}:{apiKey}'
-  -d '{ \
-    "friendly_name": "New York Office", \
-    "name": "Parakeet Communications", \
-    "street": "16 W 22nd Street", \
-    "city": "New York", \
-    "region": "NY", \
-    "postal_code": "10010", \
-    "country_code": "US" \
+  -d '{ 
+    "friendly_name": "New York Office",
+    "name": "Parakeet Communications",
+    "street": "16 W 22nd Street",
+    "city": "New York",
+    "region": "NY",
+    "postal_code": "10010",
+    "country_code": "US"
   }'
 ```
 

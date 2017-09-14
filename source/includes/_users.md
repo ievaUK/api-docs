@@ -150,12 +150,12 @@ Fetches a specific user by its identifier.
 curl https://api.parakeet.is/api/v1/users
   -H 'Content-Type: application/json'
   -u '{accountId}:{apiKey}'
-  -d '{ \
-    "email": "john.doe@company.com", \
-    "profile": { \
-      "first_name": "John", \
-      "last_name": "Doe" \
-    } \
+  -d '{
+    "email": "john.doe@company.com", 
+    "profile": {
+      "first_name": "John",
+      "last_name": "Doe" 
+    }
   }'
 ```
 

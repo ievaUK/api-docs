@@ -4,7 +4,7 @@ Contacts allow you to associate people and companies with phone numbers. When ma
 
 Parakeet contacts can come from three different sources:
 
- - Contacts created directly via the Parakeet applications our API
+ - Contacts created directly via the Parakeet applications or API
  - Contacts automatically managed by Parakeet to reflect teams and users
  - Contacts imported from supported integrations
 

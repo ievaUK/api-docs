@@ -42,7 +42,7 @@ Retry-After: 10
 
 In order to ensure high availability and quality service for all of our users, Parakeet enforces a limit of 120 requests every 60 seconds over the API. The limit is enforced independently per account.
 
-Each request will include the following headers
+Each response will include the following headers
 
 Header | Description
 -------|--------

@@ -34,9 +34,6 @@ Event | Description
 `call.connected` | Call has been answered
 `call.ended` | Call has terminated
 `call.tagged` | Call has been tagged
-`call.assigned` | Call has been assigned
-`call.archived` | Call has been archived
-`call.unarchived` | Call has been unarchived
 `call.comment` | Call has been commented on
 `call.voicemail` | Voicemail has been left for a call
 `contact.added` | Contact has been added to the account
@@ -47,4 +44,4 @@ Event | Description
 `number.deleted` | Number has been deleted and is no longer callable
 `user.added` | User has been added to the account
 `user.updated` | User has been updated
-`user.deleted` | User has been deleted from the account 
+`user.deleted` | User has been deleted from the account

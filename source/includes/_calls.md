@@ -2,7 +2,7 @@
 
 In Parakeet, a Call object is a representation of an active call. Calls represent a single leg of a conversation. For example, if one Parakeet user places a call to another, two Call resources will be created. Each will have their own status, disposition, and perspective on the data.
 
-This understanding is critical to the way calls function in Parakeet. 
+This understanding is critical to the way calls function in Parakeet.
 
 ## Call Object
 
@@ -17,13 +17,11 @@ This understanding is critical to the way calls function in Parakeet.
   "remote": "+12125551234",
   "contact": { ... },
   "user": { ... },
-  "assignee": { ... },
   "number": {
     "href": "/api/v1/numbers/PNb964a6be670811e7a538415bbbab7a13",
     "id": "PNb964a6be670811e7a538415bbbab7a13"
   },
   "comments": false,
-  "archived": true,
   "tags": [],
   "started_at": "2017-09-09T04:21:49.626Z",
   "active_at": "2017-09-09T04:21:51.046Z",
@@ -42,7 +40,6 @@ disposition | string | Disposition of the call (`null` until status is `complete
 remote | string | Handle for the participant on the other end of the call
 contact | [Contact](#contact-object) | Contact on the other end of the call, or `null` if none was found
 user | [User](#user-object) | User who spoke on the call, if known
-assignee | [User](#user-object) | User the call is assigned to
 number | [Number](#number-object) | Number that the call was made/received on
 started_at | date | Timestamp when the call started ringing
 active_at | date | Timestamp when the call went to an active status
@@ -73,13 +70,11 @@ Link: <https://api.parakeet.is/api/v1/calls?cursor=abcdefg>; rel="next"; cursor=
     "remote": "+12125551234",
     "contact": { ... },
     "user": { ... },
-    "assignee": { ... },
     "number": {
       "href": "/api/v1/numbers/PNb964a6be670811e7a538415bbbab7a13",
       "id": "PNb964a6be670811e7a538415bbbab7a13"
     },
     "comments": false,
-    "archived": true,
     "tags": [],
     "started_at": "2017-09-09T04:21:49.626Z",
     "active_at": "2017-09-09T04:21:51.046Z",
@@ -102,8 +97,6 @@ Parameter | Type | Values
 --------- | ------- | -----------
 status | string | One of `queued`, `ringing`, `in_progress`, or `completed`
 disposition | string | One of `connected`, `failed`, `canceled`, `busy`, or `no_answer`
-assignee | string | Identifier for the user the call is assigned to
-archived | boolean | `true` for archived calls, `false` for unarchived
 tags | string | Name of a tag to search for
 limit | number | Number of results to return, max 100.
 
@@ -130,13 +123,11 @@ Content-Type: application/json
   "remote": "+12125551234",
   "contact": { ... },
   "user": { ... },
-  "assignee": { ... },
   "number": {
     "href": "/api/v1/numbers/PNb964a6be670811e7a538415bbbab7a13",
     "id": "PNb964a6be670811e7a538415bbbab7a13"
   },
   "comments": false,
-  "archived": true,
   "tags": [],
   "started_at": "2017-09-09T04:21:49.626Z",
   "active_at": "2017-09-09T04:21:51.046Z",
@@ -151,57 +142,6 @@ Fetch a specific call by its identifier. The returned type of this endpoint is t
 ### HTTP Request
 
 `GET https://api.parakeet.is/api/v1/calls/{id}`
-
-## Update Call
-
-```shell
-curl https://api.parakeet.is/api/v1/calls/CA663b709f951611e787aae7b5749363bb
-  -H 'Content-Type: application/json'
-  -u '{accountId}:{apiKey}'
-  -d '{ "assignee": null }'
-```
-
-> Example Response
-
-```json
-{
-  "href": "/api/v1/calls/CA663b709f951611e787aae7b5749363bb",
-  "id": "CA663b709f951611e787aae7b5749363bb",
-  "direction": "inbound",
-  "status": "completed",
-  "disposition": "connected",
-  "duration": 5,
-  "remote": "+12125551234",
-  "contact": { ... },
-  "user": { ... },
-  "assignee": null,
-  "number": {
-    "href": "/api/v1/numbers/PNb964a6be670811e7a538415bbbab7a13",
-    "id": "PNb964a6be670811e7a538415bbbab7a13"
-  },
-  "comments": false,
-  "archived": true,
-  "tags": [],
-  "started_at": "2017-09-09T04:21:49.626Z",
-  "active_at": "2017-09-09T04:21:51.046Z",
-  "ended_at": "2017-09-09T04:21:56.326Z",
-  "created_at": "2017-09-09T04:21:49.507Z",
-  "updated_at": "2017-09-09T04:21:56.398Z"
-}
-```
-
-Updates properties of an existing call. This endpoint can be used to reassign and archive calls.
-
-### HTTP Request
-
-`POST https://api.parakeet.is/api/v1/calls/{id}`
-
-### Request Body
-
-Parameter | Type | Values
---------- | ------- | -----------
-assignee | string or object | Either a User object or identifier
-archived | boolean | True to archive a call, false to unarchived
 
 ## Tag Call
 

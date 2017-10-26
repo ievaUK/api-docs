@@ -39,12 +39,12 @@ Event | Description
 `call.unarchived` | Call has been unarchived
 `call.comment` | Call has been commented on
 `call.voicemail` | Voicemail has been left for a call
-`contact.created` | Contact has been created
+`contact.added` | Contact has been added to the account
 `contact.updated` | Contact has been updated
 `contact.deleted` | Contact has been deleted
-`number.created` | Number has been provisioned and added
+`number.added` | Number has been provisioned and added
 `number.updated` | Number has been updated to a new destination
 `number.deleted` | Number has been deleted and is no longer callable
-`user.created` | User has been added to the account
+`user.added` | User has been added to the account
 `user.updated` | User has been updated
 `user.deleted` | User has been deleted from the account 

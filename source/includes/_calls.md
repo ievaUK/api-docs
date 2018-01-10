@@ -95,7 +95,7 @@ Paginations through all of the call history on the given account. The returned l
 
 Parameter | Type | Values
 --------- | ------- | -----------
-status | string | One of `queued`, `ringing`, `in_progress`, or `completed`
+status | string | One of `ringing`, `in_progress`, or `completed`
 disposition | string | One of `connected`, `failed`, `canceled`, `busy`, or `no_answer`
 tags | string | Name of a tag to search for
 limit | number | Number of results to return, max 100.
